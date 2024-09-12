@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--divinectorweb.com-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VR Visual</title>
+    
+    <!-- All CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+        body {
+            background: #f1fbff;
+        }
+        .section-padding {
+            padding: 100px 0;
+        }
+        .carousel-item {
+            height: 100vh;
+            min-height: 300px;
+        }
+        .carousel-caption {
+            bottom: 220px;
+            z-index: 2;
+        }
+        .carousel-caption h5 {
+            font-size: 45px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 25px;
+        }
+        .carousel-caption p {
+            width: 60%;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.9;
+        }
+        .carousel-inner:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+        .navbar .getstarted {
+            background: #106eea;
+            margin-left: 30px;
+            border-radius: 4px;
+            font-weight: 400;
+            color: #fff;
+            text-decoration: none;
+            padding: .5rem 1rem;
+            line-height: 2.3;
+        }
+        .navbar-nav a {
+            font-size: 15px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .navbar-light .navbar-brand {
+            color: #000;
+            font-size: 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+            color: #000;
+        }
+        .navbar-light .navbar-nav .nav-link {
+            color: #000;
+        }
+        .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+            color: #000;
+        }
+        .w-100 {
+            height: 100vh;
+        }
+        .navbar-toggler {
+            padding: 1px 5px;
+            font-size: 18px;
+            line-height: 0.3;
+            background: #fff;
+        }
+        .portfolio .card {
+            box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        .team .card {
+            box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        .services .card-body i {
+            font-size: 50px;
+        }
+        .team .card-body i {
+            font-size: 20px;
+        }
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+            .carousel-caption {
+                bottom: 370px;
+            }
+            .carousel-caption p {
+                width: 100%;
+            }
+            .card {
+                margin-bottom: 30px;
+            }
+            .img-area img {
+                width: 100%;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+            .navbar-nav {
+                text-align: center;
+            }
+            .carousel-caption {
+                bottom: 125px;
+            }
+            .carousel-caption h5 {
+                font-size: 17px;
+            }
+            .carousel-caption a {
+                padding: 10px 15px;
+                font-size: 15px;
+            }
+            .carousel-caption p {
+                width: 100%;
+                line-height: 1.6;
+                font-size: 12px;
+            }
+            .about-text {
+                padding-top: 50px;
+            }
+            .card {
+                margin-bottom: 30px;
+            }
+        }
+        
+        </style>
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#"><span class="text-warning">VR</span>Visual</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Tourist Places</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link" href="#team">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>          
+            </ul>
+          </div>
+        </div>
+      </nav>
+         
+         
+         
+         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../static/images/bg1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h5>VR Experience</h5>
+                              <p>Virtual Reality Is a Simulated Experience That Empolyes Pose Tracking And 3D Near Eye Display TO Give The User An Immersive Feel Of The a Vitual World </p>
+                              <p><a href="#portfolio" class="btn btn-warning mt-3">Get Start</a></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../static/images/bg2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h5>VR Toursim</h5>
+                              <p>In the travel industry, Virtual Reality Can be used to capture tourism destination in a unique and immersive way!! </p>
+                              <p><a href="#portfolio" class="btn btn-warning mt-3">Get Start</a></p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../static/images/bg3.jpg"class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h5>Travel In VR</h5>
+                              <p>The VR tourism video works much like a normal video. They can be viewed on social media or websites, but unlike a regular video, The user is able to explore the entire scene whiles the video is playing </p>
+                              <p><a href="#portfolio" class="btn btn-warning mt-3">Get strat</a></p>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- about section starts -->
+      <section id="about" class="about section-padding">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-4 col-md-12 col-12">
+                      <div class="about-img">
+                          <img src="../static/images/france-eiffel-tower-paris.jpg" alt="" class="img-fluid" style="width:50em; height:22em ;">
+                      </div>
+                  </div>
+                  <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                      <div class="about-text">
+                            <h2>We Provide the Best Video Quality <br/> Experience Ever</h2>
+                            <p>360-degree video is typically recorded using either a special rig of multiple cameras, or using a dedicated camera that contains multiple camera lenses embedded into the device, and recording overlapping angles simultaneously, Specialized omnidirectional cameras and rigs have been developed for the purpose of recording 360-degree video, including rigs such as GoPro's Omni and Odyssey (which consist of multiple action cameras installed within a frame), and contained cameras like the Nokia OZO.</p>
+                            <a href="https://en.wikipedia.org/wiki/Virtual_reality" target="_blank" class="btn btn-warning">Learn More</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!-- about section Ends -->
+      <!-- services section Starts -->
+      <section class="services section-padding" id="services">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="section-header text-center pb-5">
+                          <h2>Our Services</h2>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-laptop"></i>
+                            <h3 class="card-title">Best Quality</h3>
+                            <p class="lead">It's measured by the number of pixels contained in the standard aspect ratio of 16:9, the most common aspect ratio for television and computer monitors.</p>
+                            <p style="width: 100%;  border:solid 2px #ffc107;"></p>
+                        </div>
+                    </div>
+                </div>
+                  <div class="col-12 col-md-12 col-lg-4">
+                      <div class="card text-white text-center bg-dark pb-2">
+                          <div class="card-body">
+                            <i class="bi bi-journal"></i>
+                              <h3 class="card-title">Sustainability</h3>
+                              <p class="lead">*DECREASING EMISSIONS,
+                                EDUCATION ON CLIMATE CHANGE,
+                                SAVE ON MATERIAL AND ENERGY WASTE,
+                                RECYCLED HARDWARE.<br><br>
+                              </p>
+                              <p style="width: 100%;  border:solid 2px #ffc107;"></p>                          </div>
+                      </div>
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-4">
+                      <div style="border-top: #ffc107 10px;" class="card text-white text-center bg-dark pb-2">
+                          <div class="card-body">
+                            <i class="bi bi-intersect"></i>
+                              <h3 class="card-title">Impact of VR</h3><br>
+                              <p class="lead">The aim of the present study was to investigate the possible impact of virtual reality on curiosity.<br><br></p>
+                              <p style="width: 100%;  border:solid 2px #ffc107;"></p>
+                            </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!-- services section Ends -->
+
+      <!-- portfolio strats -->
+      <section id="portfolio" class="portfolio section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Popular Places</h2>
+                        <p>Select Your Favorote Place And View 360* Real Experience</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                          <div class="img-area mb-4">
+                              <img src="../static/images/Park_located_below_the_foot_of_the_Mettur_dam.jpg" class="img-fluid" alt="">
+                          </div>
+                            <h3 class="card-title">Mettur DAM</h3>
+                            <p class="lead" style="font-size:18px;">It was constructed in 1934 and took 9 years to complete. Maximum storage height is 120 feet. Mettur Dam receives the water from both Kabini Dam and Krishna Raja Sagara Dam located in Karnataka. It's On of the tourist place</p>
+                            <button class="btn bg-warning text-dark"><a href="/mettur" target="_blank" style="text-decoration: none; color: black;">VIEW</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                          <div class="img-area mb-6">
+                              <img src="../static/images/bhavanisagar.jpg" class="img-fluid" alt="">
+                          </div>
+                            <h3 class="card-title" style="margin-top: 30px;">Bhavani sagar DAM</h3>
+                            <p class="lead" style="font-size:18px;">The Lower Bhavani Project was the first major irrigation project initiated in India, after independence, in 1948. It was completed by 1955 and opened for use in 1956. The dam was constructed at a cost of ₹210 M</p>
+                            <button class="btn bg-warning text-dark" style="margin-top: 20px;"><a href="/bhavanisagar" target="_blank" style="text-decoration: none; color: black;">VIEW</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                          <div class="img-area mb-6">
+                              <img src="../static/images/16701880.jpg" class="img-fluid" alt="" >
+                          </div>
+                            <h3 class="card-title"  style="margin-top: 20px;">Kodiveri DAM</h3>
+                            <p class="lead" style="font-size:18px;"> It was constructed by Kongalvan Vettuva Gounder King in the year 1125 AD. Creating the dam consisted of carving a 20-foot wall of rock. The stones were then interlocked with iron bars and lead was used as mortar</p>
+                            <button class="btn bg-warning text-dark"><a href="/kodiveri" target="_blank" style="text-decoration: none; color: black;">VIEW</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                          <div class="img-area mb-6">
+                              <img src="../static/images/jkkm.jpg" class="img-fluid" alt="">
+                          </div>
+                            <h3 class="card-title" style="margin-top: 20px;">JKKM College Of Technology</h3>
+                            <p class="lead" style="font-size:18px;">The college is approved by AICTE and is affiliated with the Anna University Coimbatore. The college was established in the academic year 2008-2009 and governed by the Annai J.K.K. Sampoorani Ammal Charitable Trust. The college covers an area of 250 acres.</p>
+                            <button class="btn bg-warning text-dark" style="margin-top:2em;"><a href="/jkkm" target="_blank" style="text-decoration: none; color: black;">VIEW</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      <!-- portfolio ends -->
+      <!-- team starts -->
+      <section class="team section-padding" id="team">
+        
+          <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Our Team</h2>
+                        <p>Everyone does better when we all do better.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="../static/images/BALU.JPG" alt="" class="img-fluid rounded-circle" style="height: 10em; width: 10em;object-fit: cover; ">
+                        <h3 class="card-title py-2">R BALU</h3>
+                        <p class="socials">
+                       <a href="#"> <i class="bi bi-twitter text-dark mx-1"></i></a>
+                        <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                        <a href="https://www.linkedin.com/in/balube2003"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                        <a href="https://www.instagram.com/iam_._balu?igsh=MW4ydWV3bjB5bjUxMw=="><i class="bi bi-instagram text-dark mx-1"></i></a>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="../static/images/gokul.jpg" alt="" class="img-fluid rounded-circle"  style="height: 10em; width: 10em;">
+                        <h3 class="card-title py-2" >S Gokul</h3>
+                        <p class="socials">
+                            <a href=""> <i class="bi bi-twitter text-dark mx-1"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100055017965450"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                            <a href="https://www.linkedin.com/in/gokul-btech-723b1224a"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                            <a href="https://instagram.com/mr_dare_devil__007?igshid=YmMyMTA2M2Y="><i class="bi bi-instagram text-dark mx-1"></i></a>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="../static/images/1lena.jpg" alt="" class="img-fluid rounded-circle"  style="height: 10.2em; width: 10.2em;">
+                        <h3 class="card-title py-2"style="font-size: 25px;">G Tamilvanan</h3>
+                        <p class="socials">
+                            <a href=""> <i class="bi bi-twitter text-dark mx-1"></i></a>
+                            <a href=""><i class="bi bi-facebook text-dark mx-1"></i></a>
+                            <a href=""><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                            <a href="https://instagram.com/mom_littleking_143?igshid=YmMyMTA2M2Y="><i class="bi bi-instagram text-dark mx-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+      </section>
+      <!-- team ends -->
+      <!-- Contact starts -->
+      <section id="contact" class="contact section-padding">
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Contact Us</h2>
+                        <p>If You Wants To Any Tourist Places, Please Contact Us </p>
+                    </div>
+                </div>
+            </div>
+			<div class="row m-0">
+				<div class="col-md-12 p-0 pt-4 pb-4">
+					<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScLf8cpEI6sQ1jIsgPG2TlI5MJ2nJoutAKCZGnwhgfbP9uLvg/formResponse" class="bg-light p-4 m-auto" method="POST">
+						<div class="row">
+                            <div class="col-md-12">
+								<div class="mb-3">
+									<input class="form-control" placeholder="Enter Name" required="" type="text" name="entry.1157573315">
+								</div>
+							</div>	
+						   <div class="col-md-12">
+								<div class="mb-3">
+									<input class="form-control" placeholder="Email" required="" type="email" name="entry.581589206">
+								</div>
+						   </div>
+							<div class="col-md-12">
+								<div class="mb-3">
+									<textarea class="form-control" placeholder="Ask For Your Favorote Places...!!!" required="" name="entry.1149144477" rows="3"></textarea>
+								</div>
+							</div><input class="btn btn-warning btn-lg btn-block mt-3" type="submit" value="submit" name="submit">
+						 </div>
+					</form>
+				</div>
+			</div>
+		</div>
+      </section>
+      <!-- contact ends -->
+      <!-- footer starts -->
+      <footer class="bg-dark p-2 text-center">
+          <div class="container">
+              <p class="text-white">All Right Reserved By @VR Visual</p>
+          </div>
+      </footer>
+      <!-- footer ends -->
+<!-- All Js -->
+    <script src="../static/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
